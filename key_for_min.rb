@@ -5,13 +5,7 @@ def key_for_min_value(name_hash)
   if name_hash = {}
     return nil
   else
-    name_hash.each do |key, value|
-      if value < min_value
-        min_value = value
-        min_key = key
-      end
-    end
-    min_key
-  end
-
+    arr = name_hash.sort_by{|name, value| value}.first
+arr[0]
+end
 end
